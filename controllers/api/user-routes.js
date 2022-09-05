@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 // GET /api/users
 router.get("/", (req, res) => {
@@ -18,9 +18,25 @@ router.get("/", (req, res) => {
 router.get("/:id", (req, res) => {
 	User.findOne({
 		attributes: { exclude: ["password"] },
+		//similar to the SQL <SELECT * FROM users WHERE id = 1>
 		where: {
 			id: req.params.id,
 		},
+		include: [
+			{
+				model: Post,
+				attributes: ["id", "title", "post_url", "created_at"],
+			},
+
+			{
+				model: Comment,
+				attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
+				include: {
+					model: User,
+					attributes: ["username"],
+				},
+			},
+		],
 	})
 		.then((dbUserData) => {
 			if (!dbUserData) {
