@@ -2,7 +2,7 @@
 
 ## Description
 
-This is an MVC basic personal blog app that allows the to user login to navigate between a homepage (that lists existing posts), and a dashboard (where they can add new material). There are options to create, read, update, comment on, and delete on posts to the blog. The app also utilizes the bcrypt package to protect against unauthorized use.  The app also utilizes the MySQL2, Sequalize, express-handlebars, dotenv, express-session and connect-session-sequelize packages to carry out functionality. 
+This is an MVC basic personal blog app that allows the user to login to navigate between a homepage (that lists existing posts), and a dashboard (where they can add new material). There are options to create, read, update, comment on, and delete on posts to the blog. The app also utilizes the bcrypt package to protect against unauthorized use. In addition, the app utilizes the MySQL2, Sequalize, express-handlebars, dotenv, express-session and connect-session-sequelize packages to carry out functionality.
 
 View live demo here https://drive.google.com/file/d/1AQkL91HQhI_5BStJnevqEf3TaeI19mS1/view .
 
@@ -33,7 +33,6 @@ SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ## Issues
 
 N/A
-
 
 ## License
 
