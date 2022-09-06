@@ -3,25 +3,33 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Just Tech News</title>
+		<title>Christina's Tech Blog</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
 	</head>
 
 	<body>
 		<div class="wrapper">
+			<nav class="navigation">
+				<a class="nav2" href="/">Home </a>
+				<a class="nav2" href="/dashboard">Dashboard </a>
+				<a class="nav2" href="/login">Login</a>
+				<button id="logout" class="btn-no-style">Logout</button>
+			</nav>
 			<header>
-				<h1>
-					<a href="/">Christina's Tech Blog</a>
+				<h1 class="titleBox">
+					<a class="maintitle" href="/">Christina's Tech Blog</a>
 				</h1>
 			</header>
 			<main>
 				{{{body}}}
 			</main>
 			<footer>
-				Thanks for visiting!
+
 			</footer>
 		</div>
-
+		{{#if loggedIn}}
+			<script src="/javascript/logout.js"></script>
+		{{/if}}
 	</body>
 
 </html>

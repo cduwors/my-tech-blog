@@ -8,14 +8,18 @@ html {
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
-	color: #333;
+	background: url(/img/techbg.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 
 a {
 	text-decoration: none;
-	color: #225ca3;
 	font-weight: bold;
 	transition: color 0.1s;
+	color: lightgoldenrodyellow;
 }
 
 a:hover {
@@ -46,7 +50,6 @@ textarea,
 input {
 	padding: 0.5%;
 	border-radius: 5px;
-	border: 1px solid #ccc;
 }
 
 textarea:focus,
@@ -81,17 +84,65 @@ header {
 	border-bottom: 1px solid #ccc;
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: left;
 	padding: 0 1%;
 }
 
+.navigation {
+	font-size: 1.5em;
+	padding: 20px;
+	color: lightgoldenrodyellow;
+}
+
+.nav2 {
+	margin-left: 16px;
+	color: lightgoldenrodyellow;
+}
+
+.nav2 :hover {
+	color: #3486eb;
+}
 header h1 {
-	font-size: 1em;
+	font-size: 2em;
+}
+
+.titleBox {
+	border-radius: 20px;
+	background-color: lightgoldenrodyellow;
+	color: darkblue;
+	box-shadow: 10px 5px 5px lightblue;
+	padding: 15;
+}
+
+.maintitle {
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.1s;
+	color: darkblue;
+}
+
+.maintitle :hover {
+	color: #3486eb;
+}
+
+.title {
+	color: lightgoldenrodyellow;
+	background-color: darkblue;
+	padding: 8px;
+	font-size: 1.5em;
+}
+
+p {
+	padding: 5px;
+	text-decoration: none;
+	color: darkblue;
+	font-size: 75%;
 }
 
 main {
 	flex: 1;
 	padding: 2% 4%;
+	background-color: lightgoldenrodyellow;
 }
 
 .btn-no-style {
@@ -100,7 +151,7 @@ main {
 	padding: 0;
 	cursor: pointer;
 	text-decoration: none;
-	color: #225ca3;
+	color: lightgoldenrodyellow;
 	font-size: 100%;
 	font-weight: bold;
 	transition: color 0.1s;
@@ -117,32 +168,23 @@ main {
 }
 
 .delete-post-btn:hover {
-	background-color: #ff643d;
+	background-color: #3486eb;
 }
 
 .post {
-	margin-bottom: 2%;
+	margin: 2%;
 	line-height: 150%;
+	border: solid 2px darkblue;
 }
 
 .post .title span {
 	font-style: italic;
 	font-size: 90%;
-	color: #7d7d7d;
 }
 
 .edit-link {
 	display: block;
 	margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-	background-color: #197d0f;
-	transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-	background-color: #1f9c13;
 }
 
 .comment-form {
@@ -158,10 +200,20 @@ main {
 	background-color: #fff5eb;
 }
 
-.comment .meta {
+.comment {
 	font-size: 90%;
 	margin-bottom: 0.5%;
 	opacity: 0.6;
+	padding: 5px;
+	color: darkblue;
+}
+
+.meta {
+	font-size: 75%;
+	margin-bottom: 0.5%;
+	padding: 5px;
+	color: lightgoldenrodyellow;
+	background-color: darkblue;
 }
 
 .new-post-form input {
@@ -173,7 +225,6 @@ main {
 }
 
 footer {
-	border-top: 1px solid #ccc;
 	display: flex;
 	justify-content: center;
 	padding: 1%;
