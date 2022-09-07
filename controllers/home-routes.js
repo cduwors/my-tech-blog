@@ -4,7 +4,7 @@ const { Post, User, Comment } = require("../models");
 
 router.get("/", (req, res) => {
 	Post.findAll({
-		attributes: ["id", "post_url", "title", "created_at"],
+		attributes: ["id", "post_url", "title", "description", "created_at"],
 		include: [
 			{
 				model: Comment,
@@ -33,7 +33,7 @@ router.get("/", (req, res) => {
 
 router.get("/login", (req, res) => {
 	if (req.session.loggedIn) {
-		console.log("already logged in");
+		// console.log("already logged in");
 		res.redirect("/");
 		return;
 	}

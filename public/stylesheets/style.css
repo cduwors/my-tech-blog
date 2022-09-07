@@ -27,7 +27,7 @@ a:hover {
 }
 
 button {
-	background-color: #225ca3;
+	background-color: #3486eb;
 	border: 0;
 	padding: 1%;
 	color: white;
@@ -38,7 +38,7 @@ button {
 }
 
 button:hover {
-	background-color: #3486eb;
+	background-color: lightblue;
 }
 
 .post-list {

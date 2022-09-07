@@ -5,7 +5,7 @@ const { Post, User, Comment } = require("../../models");
 router.get("/", (req, res) => {
 	Post.findAll({
 		order: [["created_at", "DESC"]],
-		attributes: ["id", "post_url", "title", "description", "created_at"],
+		attributes: ["id", "post_url", "title", "created_at", "description"],
 		include: [
 			// include the Comment model here:
 			{
@@ -22,7 +22,10 @@ router.get("/", (req, res) => {
 			},
 		],
 	})
-		.then((dbPostData) => res.json(dbPostData))
+		.then((dbPostData) => {
+			console.log(dbPostData.description);
+			res.json(dbPostData);
+		})
 		.catch((err) => {
 			console.log(err);
 			res.status(500).json(err);
